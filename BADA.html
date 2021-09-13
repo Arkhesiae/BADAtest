@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>BADA Test</title>
+        <link href="c.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"></script>
+
+        <script src="perfomanceFile.js" type="module"></script>
+
+</head>
+<body>
+
+<!--MENU PRINCIPAL POUR LA SELECTION DU PANNEAU ACTIF-->
+
+<!--PANNEAUX-->
+<div class="panel">
+        <div class="" id="chart-container">
+                <div class="canvas-container">
+                        <canvas height="250" id="altitude" width="400"></canvas>
+                </div>
+
+                <div class="canvas-container" id="sector-load">
+                        <canvas height="250" id="speed" width="400"></canvas>
+                </div>
+
+                <div class="canvas-container">
+                        <canvas height="250" id="mach" width="400"></canvas>
+                </div>
+
+                <div class="canvas-container" >
+                        <canvas height="250" id="force" width="400"></canvas>
+                </div>
+
+                <div class="canvas-container" >
+                        <canvas height="250" id="ROCD" width="400"></canvas>
+                </div>
+        </div>
+        <div id="interface">
+                <div class="instruction" id="climb">
+                        <div class="label">CLIMB</div>
+                        <label>
+                                <input id="climbInput" placeholder="Temps de montée">
+                        </label>
+                        <div>
+                                <button id="button-montee-vitesse">CAS / Mach constant</button>
+                        </div>
+                        <div>
+                                <button id="button-montee-acc">Accel</button>
+                        </div>
+                        <div>
+                                <button id="button-montee-dec">Decel</button>
+                        </div>
+                        <div>  <input class="ROCD" id="ROCDCLBtgt" placeholder="Target ROCD">
+                                <button class="ROCD" id="button-montee-ROCD">ROCD Constant</button>
+                        </div>
+                </div>
+                <div class="instruction" id="descent">
+                        <div class="label">DESCENT</div>
+                        <label>
+                                <input id="inputTempsDescent" placeholder="Temps de descente">
+                        </label>
+                        <div>
+                                <button id="button-descent-vitesse">CAS / Mach constant</button>
+                        </div>
+                        <div>
+                                <button id="button-descent-acc">Accel</button>
+                        </div>
+                        <div>
+                                <button id="button-descent-dec">Decel</button>
+                        </div>
+                        <div>  <input class="ROCD" id="ROCDEStgt" placeholder="Target ROCD">
+                                <button class="ROCD" id="button-descent-ROCD">ROCD Constant</button>
+                        </div>
+                </div>
+                <div class="instruction" id="speedy">
+                        <div class="label">SPEED</div>
+                        <label>
+                                <input placeholder="Target speed CAS">
+                        </label>
+                        <div>
+                                <button>Go target CAS</button>
+                        </div>
+                        <label>
+                                <input placeholder="Target speed Mach">
+                        </label>
+                        <div>
+                                <button>Go target Mach</button>
+                        </div>
+                </div>
+        </div>
+</div>
+
+
+
+
+
+</body>
+</html>
